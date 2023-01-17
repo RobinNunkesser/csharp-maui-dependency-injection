@@ -14,7 +14,7 @@ public partial class App : Application
         MainPage = shell;
     }
 
-    /* ALternative: Manually obtain service
+    /* Alternative: Manually obtain service
     public App(IServiceProvider serviceProvider)
     {
         InitializeComponent();
