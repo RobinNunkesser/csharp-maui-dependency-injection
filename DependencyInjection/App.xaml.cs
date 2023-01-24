@@ -6,21 +6,10 @@ namespace DependencyInjection;
 
 public partial class App : Application
 {
-    // Constructor Injection
-    public App(AppShell shell)
+    public App(IMessageWriter messageWriter)
     {
         InitializeComponent();
-
-        MainPage = shell;
+        messageWriter.Write("App initialized.");
+        MainPage = new AppShell();
     }
-
-    /* Alternative: Manually obtain service
-    public App(IServiceProvider serviceProvider)
-    {
-        InitializeComponent();
-
-        MainPage = serviceProvider.GetService<AppShell>();
-    }
-    */
 }
-

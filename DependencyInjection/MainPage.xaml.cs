@@ -2,10 +2,12 @@
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
+    readonly MainViewModel _viewModel;
+
+    public MainPage(MainViewModel viewModel)
     {
         InitializeComponent();
+
+        BindingContext = _viewModel = viewModel;
     }
-
 }
-

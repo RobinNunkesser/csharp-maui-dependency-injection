@@ -6,7 +6,8 @@ namespace DependencyInjection;
 
 class Program : MauiApplication
 {
-    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+    protected override MauiApp CreateMauiApp() =>
+        MauiProgram.CreateMauiApp();
 
     static void Main(string[] args)
     {
@@ -14,4 +15,3 @@ class Program : MauiApplication
         app.Run(args);
     }
 }
-
