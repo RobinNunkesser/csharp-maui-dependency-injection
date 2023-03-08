@@ -38,7 +38,7 @@ public static class MauiProgram
             default:
                 builder.Services.AddSingleton<
                     IMessageWriter,
-                    DebugMessageWriter
+                    NoMessageWriter
                 >();
                 break;
         }

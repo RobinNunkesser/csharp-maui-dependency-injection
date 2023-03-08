@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace DependencyInjection
 {
-    public class NoMessageWriter : IMessageWriter
+    public class DebugMessageWriter : IMessageWriter
     {
         public void Write(string message)
         {
-            Console.WriteLine($"NoMessageWriter.Write");
+            Debug.WriteLine(
+                $"DebugMessageWriter.Write(message: \"{message}\")"
+            );
         }
     }
 }
